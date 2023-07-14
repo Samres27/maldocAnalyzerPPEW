@@ -1,25 +1,25 @@
-PDFiD 0.2.8 C:\compartirKali\proyecto\files\tarea2.pdf
+PDFiD 0.2.8 C:/compartirKali/proyecto/files/Benign/3D_CraneAnimationSequence.pdf
  PDF Header: %PDF-1.5
- obj                  266
- endobj               265
- stream                 1
- endstream              1
- xref                   1
- trailer                1
- startxref              1
+ obj                  102
+ endobj               102
+ stream                20
+ endstream             20
+ xref                   2
+ trailer                2
+ startxref              2
  /Page                  1
  /Encrypt               0
  /ObjStm                0
- /JS                    0
- /JavaScript            0
+ /JS                    7
+ /JavaScript            7
  /AA                    0
  /OpenAction            0
- /AcroForm              0
+ /AcroForm              1
  /JBIG2Decode           0
  /RichMedia             0
  /Launch                0
  /EmbeddedFile          0
  /XFA                   0
- /URI                   0
+ /URI                  10
  /Colors > 2^24         0
 
