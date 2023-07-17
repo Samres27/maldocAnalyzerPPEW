@@ -1,11 +1,16 @@
 import pandas
 import os
+import hashlib
+import requests
+import webbrowser
 class maldocAnalyzerPdf:
     def __init__(self):
         self.readCVS()
+        
     def inserFileSearch(self,arch):
         textoutput=""
         listFile=self.extractData(arch)
+        self.Sha256url=self.SHA256_Checksum(arch)
         if(len(listFile)>50):
             vHeader=listFile[5]
             Vobj=listFile[7]
@@ -89,6 +94,7 @@ class maldocAnalyzerPdf:
             textOutput+="the pdf documents is:  "+value["Class"].values[0]+"\n"
         return textOutput
     def analizerPdf(self,OpenAction,AA,Javascript,JS,launch,RichMedia,ObjStm,JBIG2Decode):
+        bol=False
         textOutput=""
         OpenAction=float(OpenAction)
         AA=float(AA);JS=float(JS)
@@ -103,11 +109,26 @@ class maldocAnalyzerPdf:
             textOutput+=" the document is running some kind of javascript or JS, so we advise you to proceed carefully if it asks you to activate or open something"+"\n"
         else:
             textOutput+=" nothing suspicious in this document\n"
+            bol=True
+        if not(bol):
+            self.makeRequestVirusTotal()
         return textOutput
     def cleanAuxFile(self):
         archive=open("pdfInfo.txt",'w')
         archive.write('')        
-        
+    def SHA256_Checksum(self,ruta):
+        h = hashlib.sha256()
+        with open(ruta, 'rb', buffering=0) as f:
+            for b in iter(lambda : f.read(128*1024), b''):
+                h.update(b)
+        return h.hexdigest()
+    def makeRequestVirusTotal(self):
+        req=requests.get(url="https://www.virustotal.com/gui/search/")
+        if(req):
+            
+            webbrowser.open(
+            'https://www.virustotal.com/gui/search/'+self.Sha256url
+            )
         
         
 if  __name__=='__main__':

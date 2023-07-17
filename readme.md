@@ -15,6 +15,8 @@ analyzes the document, and through a search in the dataset, if a match is found,
 * pdfid
 * pandas
 * os
+* hashlib
+* requests
 * pdfMalware2022.csv (https://www.unb.ca/cic/datasets/pdfmal-2022.html)
 * tkinter(version put and drop)
 * tkinterDND2(version put and drop)
