@@ -13,6 +13,7 @@ analyzes the document, and through a search in the dataset, if a match is found,
 
 ## Requirements
 * pdfid
+* oleid
 * pandas
 * os
 * hashlib
@@ -21,5 +22,6 @@ analyzes the document, and through a search in the dataset, if a match is found,
 * tkinter(version put and drop)
 * tkinterDND2(version put and drop)
 * import optparse(version console)
+
 
 most of the requirements are in the python download manager "pip"
