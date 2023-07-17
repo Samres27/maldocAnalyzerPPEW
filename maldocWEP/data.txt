@@ -1,0 +1,25 @@
+oleid 0.60.1 - http://decalage.info/oletools
+THIS IS WORK IN PROGRESS - Check updates regularly!
+Please report any issue at https://github.com/decalage2/oletools/issues
+
+Filename: c:\Users\yosoy\OneDrive\Documentos\ExamenPractico.docx
+--------------------+--------------------+----------+--------------------------
+Indicator           |Value               |Risk      |Description               
+--------------------+--------------------+----------+--------------------------
+File format         |MS Word 2007+       |info      |                          
+                    |Document (.docx)    |          |                          
+--------------------+--------------------+----------+--------------------------
+Container format    |OpenXML             |info      |Container type            
+--------------------+--------------------+----------+--------------------------
+Encrypted           |False               |none      |The file is not encrypted 
+--------------------+--------------------+----------+--------------------------
+VBA Macros          |No                  |none      |This file does not contain
+                    |                    |          |VBA macros.               
+--------------------+--------------------+----------+--------------------------
+XLM Macros          |No                  |none      |This file does not contain
+                    |                    |          |Excel 4/XLM macros.       
+--------------------+--------------------+----------+--------------------------
+External            |0                   |none      |External relationships    
+Relationships       |                    |          |such as remote templates, 
+                    |                    |          |remote OLE objects, etc   
+--------------------+--------------------+----------+--------------------------
