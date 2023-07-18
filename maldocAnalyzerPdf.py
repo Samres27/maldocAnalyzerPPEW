@@ -3,15 +3,20 @@ import os
 import hashlib
 import requests
 import webbrowser
+from analyzerPEW import analyPEW
 class maldocAnalyzerPdf:
     def __init__(self):
         self.readCVS()
+        self.progAnaly=analyPEW()
         
     def inserFileSearch(self,arch):
         textoutput=""
-        listFile=self.extractData(arch)
+        format=["docx","doc","docm","dot","dotx","dotm","xls","xlsx","xlsm","xlsb","xltm","xlam","xlr","xlw","xltx","xlt","pptm","ppam","ppa"]
+        list=arch.split("/")[-1].split(".")[-1]
+        
         self.Sha256url=self.SHA256_Checksum(arch)
-        if(len(listFile)>50):
+        if(list=="pdf"):
+            listFile=self.extractData(arch)
             vHeader=listFile[5]
             Vobj=listFile[7]
             Vendobj=listFile[9]
@@ -36,15 +41,17 @@ class maldocAnalyzerPdf:
             vURI=listFile[47]
             vColor=listFile[51]
             textoutput+=self.searchMalware(vHeader,Vobj,Vendobj,float(Vstream),Vendstream,Vxref,float(Vtrailer),Vstartxref,Vpage,float(Vencrypt),float(VobjStm),vJS,VJavaScript,vAA,VopenAction,VAcroForm,VJBIG2Decode,VRichMedia,Vlaunch,VEmbeddedFile,vXFA,float(vColor))
+        elif list in format:
+            tex=self.progAnaly.Analyzer(arch)
+            textoutput+=tex
+            self.progAnaly.openVirusTotal(tex)
         else:
-            textoutput+="document not found or format it not pdf"+"\n"
+            textoutput+="format it not pdf or Document windows office"+"\n"
         return textoutput
     def extractData(self,filename):
         
         text="python3 .//necessaryPrograms//pdfid//pdfid.py "+filename+"  --output=pdfInfo.txt >end "
         os.system(text)
-
-
 
         archive=open("pdfInfo.txt",'r')
         ls=archive.read().split()
