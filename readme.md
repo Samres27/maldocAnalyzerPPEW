@@ -1,4 +1,4 @@
-# maldocAnalyzerPdf
+# maldocAnalyzerPPEW
 
 ## Usage
 
@@ -8,15 +8,15 @@ To use the console version you have to use the "python3 maldocAnalyzerPdfVersion
 
 ## Functioning
 
-analyzes the document, and through a search in the dataset, if a match is found, it returns the file if malicious or benign, otherwise it analyzes the document and returns the risk that it has by analyzing its structure 
+parses the document, and through a search in the data set, if it finds a match, it returns the file if it is malicious or benign, otherwise, it parses the document and returns the risk it has by parsing its structure, finally if found some worrying part, sent it to virustotal for analysis with different antivirus
 
 
 ## Requirements
 * pdfid
-* oleid
-* pandas
 * os
 * hashlib
+* oleid
+* pandas
 * requests(pip install requests)
 * pdfMalware2022.csv (https://www.unb.ca/cic/datasets/pdfmal-2022.html)
 * tkinter(version put and drop, pip install tk)
