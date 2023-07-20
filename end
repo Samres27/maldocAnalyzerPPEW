@@ -1,15 +1,15 @@
-PDFiD 0.2.8 C:/Users/yosoy/OneDrive/Documentos/img20230404_19112494.pdf
- PDF Header: %PDF-1.4
- obj                   13
- endobj                13
- stream                 3
- endstream              3
- xref                   1
- trailer                1
+PDFiD 0.2.8 c:\Users\yosoy\Downloads\Raytracing.pdf
+ PDF Header: %PDF-1.5
+ obj                   33
+ endobj                33
+ stream                32
+ endstream             32
+ xref                   0
+ trailer                0
  startxref              1
- /Page                  1
+ /Page                  0
  /Encrypt               0
- /ObjStm                0
+ /ObjStm                1
  /JS                    0
  /JavaScript            0
  /AA                    0

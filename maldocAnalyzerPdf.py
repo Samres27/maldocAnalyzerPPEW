@@ -130,12 +130,13 @@ class maldocAnalyzerPdf:
                 h.update(b)
         return h.hexdigest()
     def makeRequestVirusTotal(self):
-        req=requests.get(url="https://www.virustotal.com/gui/search/")
-        if(req):
-            
-            webbrowser.open(
-            'https://www.virustotal.com/gui/search/'+self.Sha256url
-            )
+        if(self.progAnaly.checkInternetConnection()):
+            req=requests.get(url="https://www.virustotal.com/gui/search/")
+            if(req):
+                
+                webbrowser.open(
+                'https://www.virustotal.com/gui/search/'+self.Sha256url
+                )
         
         
 if  __name__=='__main__':

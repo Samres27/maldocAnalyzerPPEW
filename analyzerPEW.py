@@ -2,6 +2,7 @@ import os
 import requests
 import hashlib
 import webbrowser
+import socket
 class analyPEW:
     def SHA256_Checksum(self,ruta):
         h = hashlib.sha256()
@@ -49,12 +50,23 @@ class analyPEW:
         
         return textAnalyzer
     def openVirusTotal(self,text):
-        req=requests.get(url="https://www.virustotal.com/gui/search/")
-        if(req):
-            if text!="error, format not supported" and not("none" in text) :
-                webbrowser.open(
+        if self.checkInternetConnection():
+            req=requests.get(url="https://www.virustotal.com/gui/search/")
+            if(req):
+                if text!="error, format not supported" and not("none" in text) :
+                    webbrowser.open(
                     'https://www.virustotal.com/gui/search/'+self.sha256url
-                )
+                    )
+    def checkInternetConnection(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(5)
+        try:
+            s.connect(("www.google.com", 80))
+        except (socket.gaierror, socket.timeout):
+            return False
+        else:
+            return True
+        s.close()
 
 if __name__=='__main__':
     prog=analyPEW()

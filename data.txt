@@ -1,15 +1,18 @@
-Filename: C:\Users\yosoy\OneDrive\Documentos\ExamenPractico.docx
 oleid 0.60.1 - http://decalage.info/oletools
 THIS IS WORK IN PROGRESS - Check updates regularly!
 Please report any issue at https://github.com/decalage2/oletools/issues
 
+Filename: c:\Users\yosoy\Downloads\file-sample_100kB.doc
 --------------------+--------------------+----------+--------------------------
 Indicator           |Value               |Risk      |Description               
 --------------------+--------------------+----------+--------------------------
-File format         |MS Word 2007+       |info      |                          
-                    |Document (.docx)    |          |                          
+File format         |MS Word 97-2003     |info      |                          
+                    |Document or Template|          |                          
 --------------------+--------------------+----------+--------------------------
-Container format    |OpenXML             |info      |Container type            
+Container format    |OLE                 |info      |Container type            
+--------------------+--------------------+----------+--------------------------
+Properties code page|-535: Unknown code  |info      |Code page used for        
+                    |page                |          |properties                
 --------------------+--------------------+----------+--------------------------
 Encrypted           |False               |none      |The file is not encrypted 
 --------------------+--------------------+----------+--------------------------
@@ -22,4 +25,10 @@ XLM Macros          |No                  |none      |This file does not contain
 External            |0                   |none      |External relationships    
 Relationships       |                    |          |such as remote templates, 
                     |                    |          |remote OLE objects, etc   
+--------------------+--------------------+----------+--------------------------
+ObjectPool          |True                |low       |Contains an ObjectPool    
+                    |                    |          |stream, very likely to    
+                    |                    |          |contain embedded OLE      
+                    |                    |          |objects or files. Use     
+                    |                    |          |oleobj to check it.       
 --------------------+--------------------+----------+--------------------------
