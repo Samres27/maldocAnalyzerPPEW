@@ -17,11 +17,12 @@ analyzes the document, and through a search in the dataset, if a match is found,
 * pandas
 * os
 * hashlib
-* requests
+* requests(pip install requests)
 * pdfMalware2022.csv (https://www.unb.ca/cic/datasets/pdfmal-2022.html)
-* tkinter(version put and drop)
+* tkinter(version put and drop, pip install tk)
 * tkinterDND2(version put and drop)
-* import optparse(version console)
+* optparse(version console, pip install optparse-pretty)
 
 
 most of the requirements are in the python download manager "pip"
+You may have problems when calling "python" so you may want to modify the code
