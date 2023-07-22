@@ -13,7 +13,7 @@ class analyPEW:
 
 
     def Analyzer(self,doc):
-        os.system("python .\oleid.py "+doc+ " >.\data.txt")
+        os.system("python ./necessaryPrograms/oleid/oleid.py "+doc+ " >.\data.txt")
         self.sha256url=self.SHA256_Checksum(doc)
 
 
