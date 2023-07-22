@@ -23,7 +23,7 @@ parses the document, and through a search in the data set, if it finds a match, 
 * tkinterDND2(version put and drop)
 * webbrowser(pip install pycopy-webbrowser)
 * optparse(version console, pip install optparse-pretty)
-
+* oletools(pip install oletools)
 
 most of the requirements are in the python download manager "pip"
 You may have problems when calling "python" so you may want to modify the code
