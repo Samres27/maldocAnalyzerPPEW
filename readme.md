@@ -20,8 +20,8 @@ parses the document, and through a search in the data set, if it finds a match, 
 * requests(pip install requests)
 * pdfMalware2022.csv (https://www.unb.ca/cic/datasets/pdfmal-2022.html)
 * tkinter(version put and drop, pip install tk)
-* tkinterDND2(version put and drop)
-* webbrowser(pip install pycopy-webbrowser)
+* tkinterDND2(version put and drop, pip install tkinterdnd2)
+* webbrowser
 * optparse(version console, pip install optparse-pretty)
 * oletools(pip install oletools)
 
